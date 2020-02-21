@@ -1,8 +1,10 @@
+/* Add background color to the top navigation bar */
 .topnav {
     overflow: hidden;
     background-color: #e9e9e9;
 }
 
+/* Style the links inside the navigation bar */
 .topnav a {
     float: left;
     display: block;
@@ -13,20 +15,22 @@
     font-size: 17px;
 }
 
+/* Change the color of links on hover */
 .topnav a:hover {
     background-color: #ddd;
     color: black;
 }
 
+/* Style the "active" element to highlight the current page */
 .topnav a.active {
     background-color: #2196F3;
     color: white;
 }
-
+/* Style the search container inside the navigation bar */
 .topnav .search-container {
     float: right;
 }
-
+/* Style the search box inside the navigation bar */
 .topnav input[type=text] {
     padding: 6px;
     margin-top: 8px;
@@ -34,6 +38,7 @@
     border: none;
 }
 
+/* Style the search button inside the navigation bar */
 .topnav .search-container button {
     float: right;
     padding: 6px;
@@ -44,11 +49,11 @@
     border: none;
     cursor: pointer;
 }
-
+/* Change the color of the search button on hover */
 .topnav .search-container button:hover {
     background: #ccc;
 }
-
+/* When the screen is less than 600px wide, stack the links and the search field vertically instead of horizontally */
 @media screen and (max-width: 600px) {
     .topnav .search-container {
         float: none;
