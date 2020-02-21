@@ -5,17 +5,17 @@
         <style>
     .flex-container{
         display:flex;
-        flex-direction: row; 
-        flex-wrap: wrap;
-        align-items: flex-start;
+        flex-wrap:wrap;
         justify-content: space-evenly;
-        flex-basis: auto;
+        align-items: baseline;
         }
                 
-  .card {
+    .card {
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-  max-width: 300px;
+  min-width: 250px;
+  max-width: 30%;
   margin: auto;
+  margin-bottom: 20px;
   text-align: center;
   font-family: arial;
 }
@@ -42,8 +42,15 @@
 }
         </style>
     </head>
-    <body>
-        <div class="card flex-container" style="background-color: rgba(47, 75, 62, 0.911);">
+    <body><div class="card">
+        <img src="jeans3.jpg" alt="Denim Jeans" style="width:100%">
+        <h1>Tailored Jeans</h1>
+        <p class="price">$19.99</p>
+        <p>Some text about the jeans..</p>
+        <p><button>Add to Cart</button></p>
+      </div>
+        
+        <div class="flex-container" style="background-color: rgba(47, 75, 62, 0.911);">
             <div class="card">
                 <img src="jeans3.jpg" alt="Denim Jeans" style="width:100%">
                 <h1>Tailored Jeans</h1>
