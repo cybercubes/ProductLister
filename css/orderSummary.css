@@ -1,0 +1,64 @@
+/*position and size of Order Summary div that holds the button and the content*/
+.ordsum {
+    float: right;
+    width: 35%;
+}
+/*Style for the button that shows or hides divs*/
+.collapsible {
+    background-color: #777;
+    color: white;
+    cursor: pointer;
+    padding: 18px;
+    width: 100%;
+    border: none;
+    text-align: left;
+    outline: none;
+    font-size: 15px;
+}
+/*style for button in ordsum div*/
+.inListButton {
+    background-color: #555;
+    color: white;
+    cursor: pointer;
+    padding: 18px;
+    width: 100%;
+    border: none;
+    text-align: center;
+    outline: none;
+    font-size: 15px;
+}
+/*Style for the collapse button when it is clicked or activated*/
+.active, .collapsible:hover{
+    background-color: #555;
+}
+/*Style for the button in ordsum*/
+.inListButton:hover {
+    background-color: #777;
+}
+/*Style for the collapsible div*/
+.content {
+    padding: 9px 18px;
+    width: 100%;
+    display: none;
+    overflow: hidden;
+    background-color: #f1f1f1;
+    float: right;
+}
+/*Style for the table in ordsum*/
+.content table {
+    border-collapse: collapse;
+    table-layout: auto;
+    border-spacing: 0px;
+    width: 100%;
+}
+/*Make it appear that all but the last element in the ordsum table look like clickable elements*/
+.content table tr:not(:last-child):hover {
+    background-color: #777;
+    cursor: pointer;
+}
+
+.content table tr:last-child {
+    border-width: 12px 0;
+    border-style: solid;
+    border-color: transparent;
+}

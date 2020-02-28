@@ -5,6 +5,7 @@
         <link rel="stylesheet" type="text/css" href="css/navbar.css">
         <link rel="stylesheet" type="text/css" href="css/footer.css">
         <link rel="stylesheet" type="text/css" href="css/main.css">
+        <link rel="stylesheet" type="text/css" href="css/orderSummary.css">
         <style>
 
         </style>
@@ -20,19 +21,65 @@
                 <button type="submit">Search</button>
             </form>
         </nav>
-        <section style="height: 1000px; width: 100%; background-color: navajowhite;">
-
+        <section style="height: 1000px; width: 100%; background-color: #FFDEAD;">
+            <div class="ordsum">
+                <button type="button" class="collapsible">Order Summary</button>
+                <div class="content">
+                    <!-- will later take data from the database-->
+                    <table>
+                        <tr onclick="window.location.href = 'product.html';">
+                            <td>Toffee</td>
+                            <td>5 kg</td>
+                            <td>$50</td>
+                        </tr>
+                        <tr onclick="window.location.href = 'product.html';">
+                            <td>Coffee</td>
+                            <td>5 kg</td>
+                            <td>$50</td>
+                        </tr>
+                        <tr onclick="window.location.href = 'product.html';">
+                            <td>Pasta</td>
+                            <td>5 kg</td>
+                            <td>$50</td>
+                        </tr>
+                        <tr>
+                            <td>Total sum</td>
+                            <td>15 kg</td>
+                            <td>$150</td>
+                        </tr>
+                    </table>
+                    <button type="button" class="inListButton" onclick="window.location.href = 'checkout.html';">To Checkout</button>
+                </div>
+            </div>
         </section>
         <!-- footer for the website -->
         <footer>
-            <a href="www.facebook.com">Facebook</a>
-            <a href="www.twitter.com">Twitter</a>
-            <a href="www.gmail.com">G-mail</a>
+            <a href="https://www.facebook.com/">Facebook</a>
+            <a href="https://twitter.com/">Twitter</a>
+            <a href="https://mail.google.com/">G-mail</a>
             <br>
             <br>
             <p>
                 &#169 2020 Weeb Shop. All rights reserved.
             </p>
         </footer>
+
+        <!-- technically we are not suppose to know how to do this part -->
+        <script>
+            var coll = document.getElementsByClassName("collapsible");
+            var i;
+
+            for (i = 0; i < coll.length; i++) {
+                coll[i].addEventListener("click", function() {
+                    this.classList.toggle("active");
+                    var content = this.nextElementSibling;
+                    if (content.style.display === "block") {
+                        content.style.display = "none";
+                    } else {
+                        content.style.display = "block";
+                    }
+                });
+            }
+        </script>
     </body>
 </html>
