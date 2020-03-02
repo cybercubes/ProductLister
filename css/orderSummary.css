@@ -1,8 +1,8 @@
 /*position and size of Order Summary div that holds the button and the content*/
-.ordsum {
+/*.ordsum {
     float: right;
     width: 24.3%;
-}
+}*/
 /*Style for the button that shows or hides divs*/
 .collapsible {
     background-color: #777;
@@ -42,7 +42,6 @@
     display: none;
     overflow: hidden;
     background-color: #f1f1f1;
-    float: right;
 }
 /*Style for the table in ordsum*/
 .content table {

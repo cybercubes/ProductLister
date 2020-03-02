@@ -7,6 +7,7 @@
     <link rel="stylesheet" type="text/css" href="css/main.css">
     <link rel="stylesheet" type="text/css" href="css/orderSummary.css">
     <link rel="stylesheet" type="text/css" href="css/browseList.css">
+    <link rel="stylesheet" type="text/css" href="css/fancyList.css">
     <style>
 
     </style>
@@ -17,13 +18,14 @@
     <a class="active" href="index.html">Home</a>
     <a href="categoryBrowse.html">Browse</a>
     <a href="#contact">Contact</a>
+    <a href="cart.html">Cart</a>
     <form action="#" class="search-container">
         <input type="text" placeholder="Search.." name="search">
         <button type="submit">Search</button>
     </form>
 </nav>
 <section>
-    <div class="ordsum">
+    <div class="secondaryContainer">
         <button type="button" class="collapsible">Order Summary</button>
         <div class="content">
             <!-- will later take data from the database-->
@@ -51,11 +53,27 @@
             </table>
             <button type="button" class="inListButton" onclick="window.location.href = 'checkout.html';">To Checkout</button>
         </div>
-        <div class="mainContainer">
-
+    </div>
+    <div class="mainContainer">
+    <div class="flex-container">
+        <div class="fancyCard">
+            <img src="./img/default_product.png" alt="Mint Chocolate">
+            <h1 onclick="window.location.href = 'product.html';">Mint Chocolate</h1>
+            <p class="price"><input type="number" min="1" max="5" value="1"> $19.99 </p>
+            <p>DOES NOT TASTE LIKE TOOTHPASTE!</p>
+            <button type="button" style="width: 10%;">remove</button>
         </div>
 
+        <div class="fancyCard">
+            <img src="./img/default_product.png" alt="Mint Chocolate">
+            <h1 onclick="window.location.href = 'product.html';">JawBeaker</h1>
+            <p class="price"><input type="number" min="1" max="5" value="1"> $19.99 </p>
+            <p>Oof! Ouch! Ow!</p>
+            <button type="button" style="width: 10%;">remove</button>
+        </div>
+        <button class="submitButton" onclick="window.location.href = 'checkout.html';"> Checkout</button>
     </div>
+</div>
 
 </section>
 <!-- footer for the website -->

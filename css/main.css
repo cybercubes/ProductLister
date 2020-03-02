@@ -15,3 +15,8 @@ section {
 .mainContainer {
     width: 75.5%;
 }
+/*position and size of a container aligned to the right of the screen*/
+.secondaryContainer {
+    float: right;
+    width: 24.3%;
+}
