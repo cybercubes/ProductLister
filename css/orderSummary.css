@@ -1,7 +1,7 @@
 /*position and size of Order Summary div that holds the button and the content*/
 .ordsum {
     float: right;
-    width: 35%;
+    width: 24.3%;
 }
 /*Style for the button that shows or hides divs*/
 .collapsible {

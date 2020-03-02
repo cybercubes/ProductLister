@@ -1,0 +1,39 @@
+.flex-container{
+    display:flex;
+    flex-wrap:wrap;
+    justify-content: space-evenly;
+    align-items: baseline;
+    background-color: #f1f1f1;
+}
+
+.card {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    min-width: 300px;
+    max-width: 30%;
+    margin: 20px auto;
+    padding-top: 20px;
+    text-align: center;
+    font-family: arial;
+}
+
+.card:hover {
+    opacity: 0.7;
+    cursor: pointer;
+}
+
+.price {
+    color: grey;
+    font-size: 22px;
+}
+
+.card button {
+    border: none;
+    outline: 0;
+    padding: 12px;
+    color: white;
+    background-color: #000;
+    text-align: center;
+    cursor: pointer;
+    width: 100%;
+    font-size: 18px;
+}

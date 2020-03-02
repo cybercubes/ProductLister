@@ -11,3 +11,7 @@ section {
     width: 100%;
     background-color: #FFDEAD;
 }
+/*container for modules positioned on the left of the screen like lists or preview modules*/
+.mainContainer {
+    width: 75.5%;
+}

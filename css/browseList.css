@@ -1,18 +1,14 @@
-/*container for the list heading and the browse list*/
-.listContainer {
-    width: 64.5%;
-}
 /*div that will have the heading for th list*/
 .listHeading {
     background-color: #777;
     color: white;
     margin: 0;
     border: none;
-    padding: 18px;
+    padding: 9px;
     width: 100%;
     text-align: left;
     outline: none;
-    font-size: 15px;
+    font-size: 12px;
     float: right;
 }
 /*div for the item list table*/
