@@ -1,4 +1,6 @@
-* {box-sizing: border-box;}
+* {
+    box-sizing: border-box;
+}
 
 body {
     margin: 0;
@@ -14,9 +16,11 @@ section {
 /*container for modules positioned on the left of the screen like lists or preview modules*/
 .mainContainer {
     width: 75.5%;
+    background-color: #f1f1f1;
 }
 /*position and size of a container aligned to the right of the screen*/
 .secondaryContainer {
     float: right;
     width: 24.3%;
+    background-color: #f1f1f1;
 }

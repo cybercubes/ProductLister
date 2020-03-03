@@ -26,13 +26,15 @@
 
 .fancyCard button {
     border: none;
-    outline: 0;
     padding: 12px;
     color: white;
     background-color: #000;
     text-align: center;
     cursor: pointer;
     font-size: 18px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
 }
 
 h1:hover {
