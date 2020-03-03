@@ -1,0 +1,33 @@
+.mainContainer img {
+    margin: 10%;
+    width: 400px;
+    height: 400px;
+}
+
+.productDescription button {
+    border: none;
+    outline: 0;
+    padding: 12px;
+    color: white;
+    background-color: #000;
+    text-align: center;
+    cursor: pointer;
+    font-size: 18px;
+    width: 100%;
+}
+.productDescription {
+    float: right;
+    margin: 10% 15% 10% 0;
+}
+
+@media screen and (max-width: 800px) {
+    .mainContainer img {
+        width: 200px;
+        height: 200px;
+    }
+
+    .productDescription {
+        float: left;
+        margin: 10%;
+    }
+}

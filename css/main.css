@@ -17,10 +17,12 @@ section {
 .mainContainer {
     width: 75.5%;
     background-color: #f1f1f1;
+    overflow:hidden;
 }
 /*position and size of a container aligned to the right of the screen*/
 .secondaryContainer {
     float: right;
     width: 24.3%;
     background-color: #f1f1f1;
+    overflow:hidden;
 }
