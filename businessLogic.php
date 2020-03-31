@@ -17,6 +17,9 @@
             case "Product":
                 include 'modules\\productPage.php';
                 break;
+            case "Search":
+                include 'modules\\search.php';
+                break;
             default:
                 include 'modules\\mainDisplay.php';
                 break;

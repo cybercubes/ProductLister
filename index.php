@@ -1,7 +1,7 @@
 <?php
     //those values mimic values taken from the database
     $categoryList = ['Hard Candies'];
-    $productList = ['JawBuster 9000', 'PepperMint Delux'];
+    $productList = ['JawBuster 9000', 'PepperMint Delux', 'ASDAS', 'EARFAS', 'eeeeeeee', 'aaaaAAAAAa', 'ASDASDAS'];
 ?>
 <!DOCTYPE html>
 <html lang="en">
