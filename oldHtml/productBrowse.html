@@ -2,12 +2,11 @@
 <html lang="en">
 <head>
     <title>Weebshop product Lister</title>
-    <link rel="stylesheet" type="text/css" href="css/navbar.css">
-    <link rel="stylesheet" type="text/css" href="css/footer.css">
-    <link rel="stylesheet" type="text/css" href="css/main.css">
-    <link rel="stylesheet" type="text/css" href="css/orderSummary.css">
-    <link rel="stylesheet" type="text/css" href="css/browseList.css">
-    <link rel="stylesheet" type="text/css" href="css/fancyList.css">
+    <link rel="stylesheet" type="text/css" href="../css/navbar.css">
+    <link rel="stylesheet" type="text/css" href="../css/footer.css">
+    <link rel="stylesheet" type="text/css" href="../css/main.css">
+    <link rel="stylesheet" type="text/css" href="../css/orderSummary.css">
+    <link rel="stylesheet" type="text/css" href="../css/browseList.css">
     <style>
 
     </style>
@@ -15,7 +14,7 @@
 <body>
 <!-- Navigation Bar -->
 <nav class="topnav">
-    <a class="active" href="index.html">Home</a>
+    <a class="active" href="../index.php">Home</a>
     <a href="categoryBrowse.html">Browse</a>
     <a href="aboutUs.html">About</a>
     <a href="cart.html">Cart</a>
@@ -24,6 +23,7 @@
         <button type="submit">Search</button>
     </form>
 </nav>
+<!-- main body of our page -->
 <section>
     <div class="secondaryContainer">
         <button type="button" class="collapsible">Order Summary</button>
@@ -51,29 +51,34 @@
                     <td>$150</td>
                 </tr>
             </table>
-            <button type="button" class="inListButton" onclick="window.location.href = 'checkout.html';">To Checkout</button>
+            <button type="button" class="inListButton" onclick="window.location.href = 'cart.html';">To Cart</button>
         </div>
     </div>
     <div class="mainContainer">
-    <div class="flex-container">
-        <div class="fancyCard">
-            <img src="./img/default_product.png" alt="Mint Chocolate">
-            <h1 onclick="window.location.href = 'product.html';">Mint Chocolate</h1>
-            <p class="price"><input type="number" min="1" max="5" value="1"> $19.99 </p>
-            <p>DOES NOT TASTE LIKE TOOTHPASTE!</p>
-            <button type="button" style="width: 10%;">remove</button>
+        <div class="listHeading">
+            <p><h2>Hard Candies</h2></p>
         </div>
-
-        <div class="fancyCard">
-            <img src="./img/default_product.png" alt="Mint Chocolate">
-            <h1 onclick="window.location.href = 'product.html';">JawBeaker</h1>
-            <p class="price"><input type="number" min="1" max="5" value="1"> $19.99 </p>
-            <p>Oof! Ouch! Ow!</p>
-            <button type="button" style="width: 10%;">remove</button>
+        <div class="itemList">
+            <table>
+                <tr onclick="window.location.href = 'product.html';">
+                    <td>Jaw breaker</td>
+                    <td>$24 per lb.</td>
+                </tr>
+                <tr onclick="window.location.href = 'product.html';">
+                    <td>Peppermints</td>
+                    <td>$24 per lb.</td>
+                </tr>
+                <tr onclick="window.location.href = 'product.html';">
+                    <td>Candy canes</td>
+                    <td>$24 per lb.</td>
+                </tr>
+                <tr onclick="window.location.href = 'product.html';">
+                    <td>Sugarplums</td>
+                    <td>$24 per lb.</td>
+                </tr>
+            </table>
         </div>
-        <button class="submitButton" onclick="window.location.href = 'checkout.html';"> Checkout</button>
     </div>
-</div>
 
 </section>
 <!-- footer for the website -->

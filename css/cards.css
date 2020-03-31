@@ -38,13 +38,13 @@
     font-size: 18px;
 }
 /*style for the desription of the card, ensures that the cards stay the same width*/
-.card p:not([price]) {
+.card p:not(.price) {
     width: 300px;
     height: 40px;
     overflow: hidden;
 }
 
-.card p:not([price]):hover {
+.card p:not(.price):hover {
     overflow: visible;
     background-color: #cccccc;
     height: 100%;

@@ -1,4 +1,4 @@
-.mainContainer img {
+.productDescription img {
     margin: 10%;
     width: 400px;
     height: 400px;
@@ -16,18 +16,13 @@
     width: 100%;
 }
 .productDescription {
-    float: right;
-    margin: 10% 15% 10% 0;
+    float: left;
+    margin: 10%;
 }
 
 @media screen and (max-width: 800px) {
     .mainContainer img {
         width: 200px;
         height: 200px;
-    }
-
-    .productDescription {
-        float: left;
-        margin: 10%;
     }
 }

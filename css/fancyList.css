@@ -19,7 +19,7 @@
     float: left;
 }
 
-.price {
+.fancyCard .price {
     color: grey;
     font-size: 22px;
 }
@@ -37,7 +37,7 @@
     white-space: nowrap;
 }
 
-h1:hover {
+.fancyCard h1:hover {
     cursor: pointer;
     background-color: #555555;
 }
