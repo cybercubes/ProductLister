@@ -13,5 +13,5 @@
             <td>$150</td>
         </tr>
     </table>
-    <button type="button" class="inListButton" onclick="window.location.href = 'cart.html';">To Cart</button>
+    <button type="button" class="inListButton" onclick="window.location.href = '?Page=Cart';">To Cart</button>
 </div>

@@ -1,17 +1,41 @@
 <?php
     if (isset($_GET['ProductName'])) {
-        $title = $_GET['ProductName'];
+        $currentProduct = $_GET['ProductName'];
+    }
+    //$backLink = '?Page=Browse&Category=' . $_GET['Category'];
+
+    //handle add to cart request
+    if (isset($_POST['addToCart'])) {
+        if (!in_array($_POST['addToCart'], $_SESSION['cart'])) {
+            array_push($_SESSION['cart'], $_POST['addToCart']);
+        }
     }
 
-    //$backLink = '?Page=Browse&Category=' . $_GET['Category'];
+    //handle remove from cart request
+    if (isset($_POST['removeFromCart'])) {
+        if (in_array($_POST['removeFromCart'], $_SESSION['cart'])) {
+            $index = array_search($_POST['removeFromCart'], $_SESSION['cart']);
+            unset($_SESSION['cart'][$index]);
+        }
+    }
+
+    //check if the current product is in the cart
+    $inCart = false;
+    if (in_array($currentProduct, $_SESSION['cart'])) {
+        $inCart = true;
+    }
 ?>
 
 <div class="productDescription">
     <img src="./img/default_product.png" alt="Mint Chocolate">
-    <h2><?php echo $title;?></h2>
+    <h2><?php echo $currentProduct;?></h2>
     <p class="price"><input type="number" min="1" max="5" value="1"> $19.99 </p>
-    <p>Oof! Ouch! Ow!</p>
-    <button type="button">Add to cart</button>
+    <form method="POST" action="">
+        <?php if ($inCart): ?>
+            <button type="submit" name="removeFromCart" value="<?php echo $currentProduct; ?>">Remove from cart</button>
+        <?php else: ?>
+            <button type="submit" name="addToCart" value="<?php echo $currentProduct; ?>">Add to cart</button>
+        <?php endif;?>
+    </form>
     <br> <br>
-    <!-- <button type="button" onclick="window.location.href = '<?php //echo $backLink; ?>';">Back</button> -->
 </div>

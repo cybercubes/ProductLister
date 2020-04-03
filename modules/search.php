@@ -1,11 +1,11 @@
 <?php
     if (isset($_GET['search'])) {
-        $search = $_GET['search'];
+        $searchQuerry = $_GET['search'];
     }
 ?>
 
 <div class="listHeading">
-    <p><h2>Search results for: "<?php echo $search;?>"</h2></p>
+    <p><h2>Search results for: "<?php echo $searchQuerry;?>"</h2></p>
     <form action="#" class="search-container">
         <input type="text" placeholder="Search.." name="search">
         <button type="submit">Search</button>

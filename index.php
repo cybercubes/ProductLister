@@ -1,5 +1,9 @@
 <?php
     //those values mimic values taken from the database
+    session_start();
+    if (!isset($_SESSION['cart'])) {
+        $_SESSION['cart'] = array();
+    }
     $categoryList = ['Hard Candies'];
     $productList = ['JawBuster 9000', 'PepperMint Delux', 'ASDAS', 'EARFAS', 'eeeeeeee', 'aaaaAAAAAa', 'ASDASDAS'];
 ?>
@@ -15,35 +19,25 @@
         <link rel="stylesheet" type="text/css" href="css/cards.css">
         <link rel="stylesheet" type="text/css" href="css/fancyList.css">
         <link rel="stylesheet" type="text/css" href="css/productDisplay.css">
-        <style>
-
-        </style>
+        <link rel="stylesheet" type="text/css" href="css/checkoutForm.css">
     </head>
     <body>
         <!-- Navigation Bar -->
-        <?php include 'modules\\navBar.php'?>
+        <?php include 'modules\\navBar.php' ?>
         <!--Sites main Body -->
         <section>
             <div class="secondaryContainer">
-                <?php include 'modules\\miniOrderSummary.php'?>
-                <?php include 'modules\\hotCategories.php'?>
-                <?php include 'modules\\cartProductSummary.php'?>
+                <?php include 'modules\\sideBar\\miniOrderSummary.php' ?>
+                <?php //include 'modules\\sideBar\\hotCategories.php' ?>
+                <?php //include 'modules\\sideBar\\cartProductSummary.php' ?>
+                <?php //include 'modules\\sideBar\\checkoutSummary.php' ?>
             </div>
             <div class="mainContainer">
-                <?php include 'businessLogic.php'?>
+                <?php include 'businessLogic.php' ?>
             </div>
         </section>
         <!-- footer for the website -->
-        <footer>
-            <a href="https://www.facebook.com/">Facebook</a>
-            <a href="https://twitter.com/">Twitter</a>
-            <a href="https://mail.google.com/">G-mail</a>
-            <br>
-            <br>
-            <p>
-                &#169 2020 Weeb Shop. All rights reserved.
-            </p>
-        </footer>
+        <?php include 'modules\\footer.php' ?>
         <!-- technically we are not suppose to know how to do this part -->
         <script>
             var coll = document.getElementsByClassName("collapsible");
