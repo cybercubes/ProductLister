@@ -27,6 +27,7 @@
 <html lang="en">
     <head>
         <title>Weebshop product Lister</title>
+        <!-- here we link all of our css-->
         <link rel="stylesheet" type="text/css" href="css/navbar.css">
         <link rel="stylesheet" type="text/css" href="css/footer.css">
         <link rel="stylesheet" type="text/css" href="css/main.css">
@@ -36,6 +37,7 @@
         <link rel="stylesheet" type="text/css" href="css/fancyList.css">
         <link rel="stylesheet" type="text/css" href="css/productDisplay.css">
         <link rel="stylesheet" type="text/css" href="css/checkoutForm.css">
+        <link rel="stylesheet" type="text/css" href="css/mainSearchBar.css">
     </head>
     <body>
         <!-- Navigation Bar -->
@@ -54,7 +56,7 @@
         </section>
         <!-- footer for the website -->
         <?php include 'modules\\footer.php' ?>
-        <!-- technically we are not suppose to know how to do this part -->
+        <!-- Script that is responsible for the collapsible element on the side bar -->
         <script>
             var coll = document.getElementsByClassName("collapsible");
             var i;

@@ -51,7 +51,7 @@
     width: 100%;
 }
 /*Make it appear that all but the last element in the ordsum table look like clickable elements*/
-.content table tr:not(:last-child):hover {
+.content table tr:not(:last-child):not(:first-child):hover {
     background-color: #777;
     cursor: pointer;
 }
@@ -60,4 +60,8 @@
     border-width: 12px 0;
     border-style: solid;
     border-color: transparent;
+}
+
+.content table th {
+    text-align: left;
 }
