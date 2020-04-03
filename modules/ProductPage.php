@@ -4,21 +4,6 @@
     }
     //$backLink = '?Page=Browse&Category=' . $_GET['Category'];
 
-    //handle add to cart request
-    if (isset($_POST['addToCart'])) {
-        if (!in_array($_POST['addToCart'], $_SESSION['cart'])) {
-            array_push($_SESSION['cart'], $_POST['addToCart']);
-        }
-    }
-
-    //handle remove from cart request
-    if (isset($_POST['removeFromCart'])) {
-        if (in_array($_POST['removeFromCart'], $_SESSION['cart'])) {
-            $index = array_search($_POST['removeFromCart'], $_SESSION['cart']);
-            unset($_SESSION['cart'][$index]);
-        }
-    }
-
     //check if the current product is in the cart
     $inCart = false;
     if (in_array($currentProduct, $_SESSION['cart'])) {

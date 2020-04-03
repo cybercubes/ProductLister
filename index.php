@@ -1,9 +1,25 @@
 <?php
-    //those values mimic values taken from the database
+    //initialise session
     session_start();
     if (!isset($_SESSION['cart'])) {
         $_SESSION['cart'] = array();
     }
+
+    //handle add to cart request
+    if (isset($_POST['addToCart'])) {
+        if (!in_array($_POST['addToCart'], $_SESSION['cart'])) {
+            array_push($_SESSION['cart'], $_POST['addToCart']);
+        }
+    }
+
+    //handle remove from cart request
+    if (isset($_POST['removeFromCart'])) {
+        if (in_array($_POST['removeFromCart'], $_SESSION['cart'])) {
+            $index = array_search($_POST['removeFromCart'], $_SESSION['cart']);
+            unset($_SESSION['cart'][$index]);
+        }
+    }
+    //these values mimic database values
     $categoryList = ['Hard Candies'];
     $productList = ['JawBuster 9000', 'PepperMint Delux', 'ASDAS', 'EARFAS', 'eeeeeeee', 'aaaaAAAAAa', 'ASDASDAS'];
 ?>
