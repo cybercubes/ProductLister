@@ -7,10 +7,7 @@
     <p>
         this website was created by the students of Taltech university. and is a website that is
         suppose to be an online product list(I'm still not sure what that is). I was very fun making it
-        and it taught us a lot of new things.this website was created by the students of Taltech university. and is a website that is
-        suppose to be an online product list(I'm still not sure what that is). I was very fun making it
-        and it taught us a lot of new things.this website was created by the students of Taltech university. and is a website that is
-        suppose to be an online product list(I'm still not sure what that is). I was very fun making it
         and it taught us a lot of new things.
+        More text could be added later
     </p>
 </div>

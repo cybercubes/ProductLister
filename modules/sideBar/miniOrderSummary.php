@@ -18,7 +18,11 @@
             <td id="totalSum"></td>
         </tr>
     </table>
-    <button type="button" class="inListButton" onclick="window.location.href = '?Page=Cart';">To Cart</button>
+    <?php if ($_GET['Page'] == 'Cart'): ?>
+        <button type="button" id="sideCheckout" class="inListButton" onclick="window.location.href = '?Page=Checkout';">To Checkout</button>
+    <?php elseif ($_GET['Page'] != 'Checkout'): ?>
+        <button type="button" class="inListButton" onclick="window.location.href = '?Page=Cart';">To Cart</button>
+    <?php endif?>
 </div>
 <!-- script resoponsible for calculating total prices -->
 <script>
@@ -37,4 +41,8 @@
 
     document.getElementById("totalAmount").innerHTML = totalAmount;
     document.getElementById("totalSum").innerHTML = totalSum;
+
+
+    //block "to checkout" if cart is empty
+    blockToCheckoutButton("sideCheckout");
 </script>

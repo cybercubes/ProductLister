@@ -24,6 +24,9 @@ if (isset($_GET['Page'])) {
         case "Checkout":
             include 'modules\\checkoutForm.php';
             break;
+        case "OrderValidation":
+            include 'modules\\orderValidation.php';
+            break;
         default:
             include 'modules\\mainDisplay.php';
             break;

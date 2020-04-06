@@ -5,6 +5,6 @@
     <br>
     <br>
     <p>
-        &#169 2020 Weeb Shop. All rights reserved.
+        &#169 2020 Weeb Shop. All rights reserved. (They actually aren't)
     </p>
 </footer>

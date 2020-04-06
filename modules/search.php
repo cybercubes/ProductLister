@@ -6,8 +6,9 @@
 
 <div class="listHeading">
     <p><h2>Search results for: "<?php echo $searchQuerry;?>"</h2></p>
-    <form action="#" class="search-container">
+    <form action="?Page=Search" method="GET" class="search-container">
         <input type="text" placeholder="Search.." name="search">
+        <input type="hidden" name="Page" value="Search">
         <button type="submit">Search</button>
     </form>
 </div>

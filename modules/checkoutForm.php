@@ -1,5 +1,5 @@
 <div class="container">
-    <form action="/action_page.php">
+    <form action="?Page=OrderValidation" method="POST">
         <div class="row">
             <div class="col-50">
                 <h3>Billing Address</h3>
@@ -13,10 +13,12 @@
                 <input type="text" id="city" name="city" placeholder="New York">
 
                 <div class="row">
+                    <!-- not sure if I'll need state
                     <div class="col-50">
                         <label for="state">State</label>
                         <input type="text" id="state" name="state" placeholder="NY">
                     </div>
+                    -->
                     <div class="col-50">
                         <label for="zip">Zip</label>
                         <input type="text" id="zip" name="zip" placeholder="10001">
@@ -26,23 +28,23 @@
 
             <div class="col-50">
                 <h3>Payment</h3>
-                <label for="fname">Accepted Cards</label>
+                <!-- I need to figure out how to make those icon to display
+                <label >Accepted Cards</label>
                 <div class="icon-container">
                     <i class="fa fa-cc-visa" style="color:navy;"></i>
                     <i class="fa fa-cc-amex" style="color:blue;"></i>
                     <i class="fa fa-cc-mastercard" style="color:red;"></i>
                     <i class="fa fa-cc-discover" style="color:orange;"></i>
                 </div>
+                -->
                 <label for="cname">Name on Card</label>
                 <input type="text" id="cname" name="cardname" placeholder="John More Doe">
                 <label for="ccnum">Credit card number</label>
                 <input type="text" id="ccnum" name="cardnumber" placeholder="1111-2222-3333-4444">
-                <label for="expmonth">Exp Month</label>
-                <input type="text" id="expmonth" name="expmonth" placeholder="September">
                 <div class="row">
                     <div class="col-50">
-                        <label for="expyear">Exp Year</label>
-                        <input type="text" id="expyear" name="expyear" placeholder="2018">
+                        <label for="expyear">Exp date</label>
+                        <input type="text" id="expyear" name="expdate" placeholder="MM/YY">
                     </div>
                     <div class="col-50">
                         <label for="cvv">CVV</label>

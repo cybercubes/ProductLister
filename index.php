@@ -38,6 +38,17 @@
         <link rel="stylesheet" type="text/css" href="css/productDisplay.css">
         <link rel="stylesheet" type="text/css" href="css/checkoutForm.css">
         <link rel="stylesheet" type="text/css" href="css/mainSearchBar.css">
+        <script>
+            //this code will disable the "to checkout" buttons if the cart is empty
+            function blockToCheckoutButton(buttId) {
+                var cartLength = <?php echo count($_SESSION['cart']); ?>;
+                if (cartLength == 0) {
+                    document.getElementById(buttId).style.backgroundColor = "#A0A0A0";
+                    document.getElementById(buttId).style.color = "#C0C0C0";
+                    document.getElementById(buttId).disabled = true;
+                }
+            }
+        </script>
     </head>
     <body>
         <!-- Navigation Bar -->
@@ -60,7 +71,6 @@
         <script>
             var coll = document.getElementsByClassName("collapsible");
             var i;
-
             for (i = 0; i < coll.length; i++) {
                 coll[i].addEventListener("click", function() {
                     this.classList.toggle("active");

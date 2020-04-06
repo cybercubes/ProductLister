@@ -14,14 +14,8 @@
         </div>
     <?php endforeach; ?>
     <button class="submitButton" onclick="window.location.href = '?Page=Checkout';" id="checkout"> Checkout</button>
-
     <script>
-        //this code will disable the "to checkout" button if the cart is empty
-        var cartLength = <?php echo count($_SESSION['cart']); ?>;
-        if (cartLength == 0) {
-            document.getElementById("checkout").style.backgroundColor = "#A0A0A0";
-            document.getElementById("checkout").style.color = "#404040";
-            document.getElementById("checkout").disabled = true;
-        }
+        //block "to checkout" if cart is empty
+        blockToCheckoutButton("checkout");
     </script>
 </div>
