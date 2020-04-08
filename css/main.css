@@ -2,9 +2,27 @@
     box-sizing: border-box;
 }
 
+@font-face{
+    font-family: Lobster;
+    src: url(./fonts/Lobster-Regular.ttf)
+}
+
+@font-face{
+    font-family: Lato;
+    src: url(./fonts/Lato-Bold.ttf);
+}
+
+/*color palette*/
+:root{
+    --deep-pink:#b9153e;
+    --stripe-pink1: #ed767d;
+    --stripe-pink2: #f48a91;
+    --cyan: #35a0a0;
+    }
+
 body {
     margin: 0;
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: Lato;
     background-color: antiquewhite;
 }
 section {
