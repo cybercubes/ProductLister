@@ -56,6 +56,7 @@ nav .search-container {
     font-size: 22px;
     width: 280px;
     border: none;
+    border-radius: 5px;
 }
 /* Style the search button inside the navigation bar */
 nav .search-container button {
@@ -92,8 +93,8 @@ nav .search-container button:hover {
         float: none;
     }
 
-    nav a.active {
-        border-radius: 0px 45px 45px 45px;
+    nav a.active, nav a:hover {
+        border-radius: 45px;
     }
     nav a, .topnav input[type=text], .topnav .search-container button {
         float: none;

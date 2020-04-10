@@ -18,23 +18,24 @@
     --stripe-pink1: #ed767d;
     --stripe-pink2: #f48a91;
     --cyan: #35a0a0;
+    --offwhite: #FDF2E8;
     }
 
 body {
     margin: 0;
     font-family: Lato;
-    background-color: antiquewhite;
+    background-color: #C8F1F6;
 }
 section {
     padding: 5px;
     overflow:hidden;
     width: 100%;
-    background-color: #FFDEAD;
+    background-color: var(--offwhite);
 }
 /*container for modules positioned on the left of the screen like lists or preview modules*/
 .mainContainer {
     width: 75.5%;
-    background-color: #f1f1f1;
+    background-color: #ffffff;
     overflow:hidden;
 }
 /*position and size of a container aligned to the right of the screen*/
