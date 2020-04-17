@@ -1,12 +1,12 @@
 <?php
     if (isset($_GET['Category'])) {
         $headingMessage = "Select the product";
-        $list = $productList;
-        $link = "?Page=Product&Category=HardCandy&ProductName=";
+        $list = 'products';
+        $hLink = '?Page=Product&ProductName=';
     } else {
         $headingMessage = "Select the category";
-        $list = $categoryList;
-        $link = "?Page=Browse&Category=HardCandy";
+        $list = 'categories';
+        $hLink = '?Page=Browse&Category=';
     }
 ?>
 
@@ -15,10 +15,12 @@
 </div>
 <div class="itemList">
     <table>
-        <?php foreach ($list as $item): ?>
-            <tr onclick="window.location.href = '<?php echo $link . $item; ?>';">
-                <td><?php echo $item; ?></td>
+        <?php
+        $listQuery = mysqli_query($link, "SELECT name FROM " . $list . ";");
+        while ($row = mysqli_fetch_assoc($listQuery)): ?>
+            <tr onclick="window.location.href = '<?php echo $hLink . $row["name"]; ?>';">
+                <td><?php echo $row["name"]; ?></td>
             </tr>
-        <?php endforeach; ?>
+        <?php endwhile; ?>
     </table>
 </div>

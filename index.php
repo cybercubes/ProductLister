@@ -1,6 +1,8 @@
 <?php
     //initialise session
     session_start();
+    require_once 'connect_db.php';
+
     if (!isset($_SESSION['cart'])) {
         $_SESSION['cart'] = array();
     }
@@ -18,10 +20,7 @@
             $index = array_search($_POST['removeFromCart'], $_SESSION['cart']);
             unset($_SESSION['cart'][$index]);
         }
-    }
-    //these values mimic database values
-    $categoryList = ['Hard Candies'];
-    $productList = ['JawBuster 9000', 'PepperMint Delux', 'ASDAS', 'EARFAS', 'eeeeeeee', 'aaaaAAAAAa', 'ASDASDAS'];
+    }    
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -52,21 +51,18 @@
     </head>
     <body>
         <!-- Navigation Bar -->
-        <?php include 'modules\\navBar.php' ?>
+        <?php include 'modules/navBar.php'; ?>
         <!--Sites main Body -->
         <section>
             <div class="secondaryContainer">
-                <?php include 'modules\\sideBar\\miniOrderSummary.php' ?>
-                <?php //include 'modules\\sideBar\\hotCategories.php' ?>
-                <?php //include 'modules\\sideBar\\cartProductSummary.php' ?>
-                <?php //include 'modules\\sideBar\\checkoutSummary.php' ?>
+                <?php include 'modules/sideBar/miniOrderSummary.php'; ?>
             </div>
             <div class="mainContainer">
-                <?php include 'businessLogic.php' ?>
+                <?php include 'businessLogic.php'; ?>
             </div>
         </section>
         <!-- footer for the website -->
-        <?php include 'modules\\footer.php' ?>
+        <?php include 'modules/footer.php' ?>
         <!-- Script that is responsible for the collapsible element on the side bar -->
         <script>
             var coll = document.getElementsByClassName("collapsible");
