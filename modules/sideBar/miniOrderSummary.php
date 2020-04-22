@@ -6,10 +6,10 @@
         <th>Amount</th>
         <th>Price</th>
         <?php foreach($_SESSION['cart'] as $item): ?>
-            <tr onclick="window.location.href = '?Page=Product&ProductName=<?php echo $item;?>';">
-                <td><?php echo $item;?></td>
-                <td>5</td>
-                <td>50</td>
+            <tr onclick="window.location.href = '?Page=Product&ProductName=<?php echo $item['name'];?>';">
+                <td><?php echo $item['name'];?></td>
+                <td><?php echo $item['quantity'];?></td>
+                <td><?php echo $item['price'];?></td>
             </tr>
         <?php endforeach;?>
         <tr>

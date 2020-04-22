@@ -9,16 +9,27 @@
 
     //handle add to cart request
     if (isset($_POST['addToCart'])) {
-        if (!in_array($_POST['addToCart'], $_SESSION['cart'])) {
-            array_push($_SESSION['cart'], $_POST['addToCart']);
+        $cartItem = ["name" => $_POST['addToCart'], "price" => $_POST['price'], "quantity" => $_POST['quantity'], "description" => $_POST['description']];
+        $alreadyInCart = false;
+        foreach($_SESSION['cart'] as $item) {
+            if ($item['name'] == $_POST['addToCart']) {
+                $alreadyInCart = true;
+                break;
+            }
+        }
+
+        if (!$alreadyInCart) {
+            array_push($_SESSION['cart'], $cartItem);
         }
     }
 
     //handle remove from cart request
     if (isset($_POST['removeFromCart'])) {
-        if (in_array($_POST['removeFromCart'], $_SESSION['cart'])) {
-            $index = array_search($_POST['removeFromCart'], $_SESSION['cart']);
-            unset($_SESSION['cart'][$index]);
+        for($i = 0; $i < sizeof($_SESSION['cart']) + 1; $i++){
+            if ($_SESSION['cart'][$i]['name'] == $_POST['removeFromCart']) {
+                unset($_SESSION['cart'][$i]);
+                break;
+            }
         }
     }    
 ?>

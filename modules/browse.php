@@ -16,7 +16,7 @@
 <div class="itemList">
     <table>
         <?php
-        $listQuery = mysqli_query($link, "SELECT name FROM " . $list . ";");
+        $listQuery = mysqli_query($link, "SELECT name FROM " . $list);
         while ($row = mysqli_fetch_assoc($listQuery)): ?>
             <tr onclick="window.location.href = '<?php echo $hLink . $row["name"]; ?>';">
                 <td><?php echo $row["name"]; ?></td>
