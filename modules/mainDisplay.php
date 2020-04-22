@@ -10,7 +10,7 @@
     ?>
         <div class="card">
             <div onclick="window.location.href = '?Page=Product&ProductName=<?php echo $row['name']; ?>';">
-                <img src="./img/default_product.png" alt="Coffee">
+                <img src="./img/default_product.png" alt="">
                 <h1><?php echo $row['name']; ?></h1>
                 <p class="price">$<?php echo $row['price'];?></p>
                 <p><?php echo $row['description'];?></p>
