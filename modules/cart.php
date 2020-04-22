@@ -7,7 +7,7 @@
             <img src="./img/default_product.png" alt="Mint Chocolate">
             <h1 onclick="window.location.href = '?Page=Product&ProductName=<?php echo $item['name']; ?>';"><?php echo $item['name']; ?></h1>
             <form  method="post" action="?Page=Cart">
-                <p class="price"><input type="number" name="quantity" min="1" max="5" value="<?php echo $item['quantity']?>"> $<?php echo $item['price']?> </p>
+                <p class="price"><input type="number" name="quantity" min="1" max="99" value="<?php echo $item['quantity']?>"> $<?php echo $item['price']?> </p>
                 <button type="submit" name="editQuantity" value="<?php echo $item['name']; ?>">Change Amount</button>
             </form>
             <p><?php echo $item['description']; ?></p>
