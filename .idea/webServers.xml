@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="WebServers">
+    <option name="servers">
+      <webServer id="2318806f-def3-465a-b149-01cb934f7094" name="enos.itcollege.ee" url="http://enos.itcollege.ee/~kiloss/weebshop/">
+        <fileTransfer rootFolder="/home/kiloss/public_html/weebshop" accessType="SFTP" host="enos.itcollege.ee" port="22" sshConfigId="1200c7c1-d2d7-468c-bc1e-a30e8774b5b8" sshConfig="kiloss@enos.itcollege.ee:22 password">
+          <advancedOptions>
+            <advancedOptions dataProtectionLevel="Private" passiveMode="true" shareSSLContext="true" />
+          </advancedOptions>
+        </fileTransfer>
+      </webServer>
+    </option>
+  </component>
+</project>

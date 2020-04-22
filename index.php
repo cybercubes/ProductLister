@@ -1,7 +1,7 @@
 <?php
     //initialise session
     session_start();
-    //require_once 'connect_db.php';
+    require_once 'connect_db.php';
 
     if (!isset($_SESSION['cart'])) {
         $_SESSION['cart'] = array();
