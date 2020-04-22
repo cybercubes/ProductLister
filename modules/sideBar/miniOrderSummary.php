@@ -27,16 +27,16 @@
 <!-- script resoponsible for calculating total prices -->
 <script>
     //this sript will look through the contents of the order summary table and calculate the total amount and price
-    var table = document.getElementById("productSummary");
-    var rows = table.rows;
-    var cell;
-    var totalAmount = 0, totalSum = 0;
-    for (var i = 1; i < rows.length - 1; i++) {
-        cell = rows[i].cells[1];
-        totalAmount += parseFloat(cell.textContent);
+    let table = document.getElementById("productSummary");
+    let rows = table.rows;
+    let AmountCell, PriceCell;
+    let totalAmount = 0, totalSum = 0;
+    for (let i = 1; i < rows.length - 1; i++) {
+        AmountCell = rows[i].cells[1];
+        totalAmount += parseFloat(AmountCell.textContent);
 
-        cell = rows[i].cells[2];
-        totalSum += parseFloat(cell.textContent);
+        PriceCell = rows[i].cells[2];
+        totalSum += parseFloat(PriceCell.textContent) * parseFloat(AmountCell.textContent);
     }
 
     document.getElementById("totalAmount").innerHTML = totalAmount;

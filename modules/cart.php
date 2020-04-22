@@ -6,10 +6,13 @@
         <div class="fancyCard">
             <img src="./img/default_product.png" alt="Mint Chocolate">
             <h1 onclick="window.location.href = '?Page=Product&ProductName=<?php echo $item['name']; ?>';"><?php echo $item['name']; ?></h1>
-            <p class="price"><input type="number" min="1" max="5" value="1"> $19.99 </p>
-            <p>Oof! Ouch! Ow!</p>
+            <form  method="post" action="?Page=Cart">
+                <p class="price"><input type="number" name="quantity" min="1" max="5" value="<?php echo $item['quantity']?>"> $<?php echo $item['price']?> </p>
+                <button type="submit" name="editQuantity" value="<?php echo $item['name']; ?>">Change Amount</button>
+            </form>
+            <p><?php echo $item['description']; ?></p>
             <form method="POST" action="">
-                <button type="submit" name="removeFromCart" value="<?php echo $item; ?>">Remove from cart</button>
+                <button type="submit" name="removeFromCart" value="<?php echo $item['name']; ?>">Remove from cart</button>
             </form>
         </div>
     <?php endforeach; ?>

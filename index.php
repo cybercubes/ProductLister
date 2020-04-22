@@ -31,7 +31,16 @@
                 break;
             }
         }
-    }    
+    }
+
+    if (isset($_POST['editQuantity'])) {
+        for($i = 0; $i < sizeof($_SESSION['cart']) + 1; $i++){
+            if ($_SESSION['cart'][$i]['name'] == $_POST['editQuantity']) {
+                $_SESSION['cart'][$i]['quantity'] = $_POST['quantity'];
+                break;
+            }
+        }
+    }
 ?>
 <!DOCTYPE html>
 <html lang="en">

@@ -22,7 +22,7 @@
             </div>
             <form method="POST" action="">
                 <input type="hidden" name="price" value="<?php echo $row['price'];?>" />
-                <input type="hidden" name="description" value="<?php echo $result['description']?>" />
+                <input type="hidden" name="description" value="<?php echo $row['description']?>" />
                 <input type="hidden" name="quantity" value="1" />
                 <?php if ($inCart): ?>
                     <p><button type="submit" name="removeFromCart" value="<?php echo $row['name']; ?>">Remove from cart</button></p>
