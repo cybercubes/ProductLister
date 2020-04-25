@@ -1,11 +1,17 @@
 <?php
     if (isset($_GET['search'])) {
-        $searchQuerry = $_GET['search'];
+        $productName = $_GET['search'];
+    } else {
+        $productName = null;
     }
+
+    $Searchquery = "SELECT * FROM products WHERE name LIKE '%" . $productName . "%';";
+    $listQuery = mysqli_query($link, $Searchquery);
+
 ?>
 
 <div class="listHeading">
-    <p><h2>Search results for: "<?php echo $searchQuerry;?>"</h2></p>
+    <p><h2>Search results for: "<?php echo $productName;?>"</h2></p>
     <form action="?Page=Search" method="GET" class="search-container">
         <input type="text" placeholder="Search.." name="search">
         <input type="hidden" name="Page" value="Search">
@@ -14,9 +20,12 @@
 </div>
 <div class="itemList">
     <table>
-        <tr onclick="window.location.href = 'product.html';">
-            <td>Jaw breaker</td>
-            <td>$24 per lb.</td>
-        </tr>
+        <?php
+        while ($row = mysqli_fetch_assoc($listQuery)): ?>
+            <tr onclick="window.location.href = '?Page=Product&ProductName=<?php echo $row['name']; ?>';">
+                <td><?php echo $row['name']; ?></td>
+                <td>$<?php echo $row['price']; ?></td>
+            </tr>
+        <?php endwhile; ?>
     </table>
 </div>
