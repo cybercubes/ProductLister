@@ -13,12 +13,6 @@
                 <input type="text" id="city" name="city" placeholder="New York">
 
                 <div class="row">
-                    <!-- not sure if I'll need state
-                    <div class="col-50">
-                        <label for="state">State</label>
-                        <input type="text" id="state" name="state" placeholder="NY">
-                    </div>
-                    -->
                     <div class="col-50">
                         <label for="zip">Zip</label>
                         <input type="text" id="zip" name="zip" placeholder="10001">
@@ -28,15 +22,6 @@
 
             <div class="col-50">
                 <h3>Payment</h3>
-                <!-- I need to figure out how to make those icon to display
-                <label >Accepted Cards</label>
-                <div class="icon-container">
-                    <i class="fa fa-cc-visa" style="color:navy;"></i>
-                    <i class="fa fa-cc-amex" style="color:blue;"></i>
-                    <i class="fa fa-cc-mastercard" style="color:red;"></i>
-                    <i class="fa fa-cc-discover" style="color:orange;"></i>
-                </div>
-                -->
                 <label for="cname">Name on Card</label>
                 <input type="text" id="cname" name="cardname" placeholder="John More Doe">
                 <label for="ccnum">Credit card number</label>

@@ -16,9 +16,5 @@
             </form>
         </div>
     <?php endforeach; ?>
-    <button class="submitButton" onclick="window.location.href = '?Page=Checkout';" id="checkout"> Checkout</button>
-    <script>
-        //block "to checkout" if cart is empty
-        blockToCheckoutButton("checkout");
-    </script>
+    <button class="submitButton checkout" onclick="window.location.href = '?Page=Checkout';"> Checkout</button>
 </div>

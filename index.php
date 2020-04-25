@@ -32,7 +32,7 @@
             }
         }
     }
-
+    //handle edit quantity request in cart
     if (isset($_POST['editQuantity'])) {
         for($i = 0; $i < sizeof($_SESSION['cart']) + 1; $i++){
             if ($_SESSION['cart'][$i]['name'] == $_POST['editQuantity']) {
@@ -57,47 +57,25 @@
         <link rel="stylesheet" type="text/css" href="css/productDisplay.css">
         <link rel="stylesheet" type="text/css" href="css/checkoutForm.css">
         <link rel="stylesheet" type="text/css" href="css/mainSearchBar.css">
-        <script>
-            //this code will disable the "to checkout" buttons if the cart is empty
-            function blockToCheckoutButton(buttId) {
-                var cartLength = <?php echo count($_SESSION['cart']); ?>;
-                if (cartLength == 0) {
-                    document.getElementById(buttId).style.backgroundColor = "#A0A0A0";
-                    document.getElementById(buttId).style.color = "#C0C0C0";
-                    document.getElementById(buttId).disabled = true;
-                }
-            }
-        </script>
     </head>
     <body>
         <!-- Navigation Bar -->
         <?php include 'modules/navBar.php'; ?>
         <!--Sites main Body -->
         <section>
+            <!--side container -->
             <div class="secondaryContainer">
                 <?php include 'modules/sideBar/miniOrderSummary.php'; ?>
             </div>
+            <!--main content container -->
             <div class="mainContainer">
                 <?php include 'businessLogic.php'; ?>
             </div>
         </section>
         <!-- footer for the website -->
         <?php include 'modules/footer.php' ?>
-        <!-- Script that is responsible for the collapsible element on the side bar -->
-        <script>
-            var coll = document.getElementsByClassName("collapsible");
-            var i;
-            for (i = 0; i < coll.length; i++) {
-                coll[i].addEventListener("click", function() {
-                    this.classList.toggle("active");
-                    var content = this.nextElementSibling;
-                    if (content.style.display === "block") {
-                        content.style.display = "none";
-                    } else {
-                        content.style.display = "block";
-                    }
-                });
-            }
+        <!-- here we link javascript to our website -->
+        <script src="js/main.js">
         </script>
     </body>
 </html>

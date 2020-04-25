@@ -16,57 +16,57 @@ $cvv = $_POST['cvv'] ?? null;
 $sameadr = $_POST['sameadr'] ?? null;
 //name validation
 if (preg_match('/^[a-zA-Z]{4,}(?: [a-zA-Z]+){0,2}$/', $firstName) == 0) {
-    echo "name";
+    echo "</p> Name is invalid </p>";
     $isValid = false;
 }
 //email validation
 if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
-    echo "mail";
+    echo "<p> Mail is invalid </p>";
     $isValid = false;
 }
 //address validation
 if (preg_match('/[A-Za-z0-9\'\.\-\s\,]/', $address) == 0) {
-    echo "address";
+    echo "<p> Address is invalid </p>";
     $isValid = false;
 }
 //city validation
 if (preg_match('/^[a-zA-Z]+(?:[\s-][a-zA-Z]+)*$/', $city) == 0) {
-    echo "city";
+    echo "<p> City is invalid </p>";
     $isValid = false;
 }
 //zip validation
 if (preg_match('/^[0-9]{5}(?:-[0-9]{4})?$/', $zip) == 0) {
-    echo "zip";
+    echo "<p> Zip code is invalid </p>";
     $isValid = false;
 }
 // name on the card validation
 if (preg_match('/^[a-zA-Z]{4,}(?: [a-zA-Z]+){0,2}$/', $cardname) == 0) {
-    echo "cardName";
+    echo "<p> Name on the card is invalid </p>";
     $isValid = false;
 }
 //card number validation
 if (preg_match("'\d{4}-?\d{4}-?\d{4}-?\d{4}'", $cardnumber) == 0) {
-    echo "card number";
+    echo "<p> Card number is invalid </p>";
     $isValid = false;
 }
 //expiration date validation
 if (preg_match('/^(0[1-9]|1[0-2])\/?([0-9]{4}|[0-9]{2})$/', $expdate) == 0) {
-    echo "expDate";
+    echo "<p> Expiration date is invalid </p>";
     $isValid = false;
 }
 //card security number validation
 if (preg_match('/^[0-9]{3,4}$/', $cvv) == 0) {
-    echo "CVV";
+    echo "<p> CVV is invalid </p>";
     $isValid = false;
 }
 if ($sameadr != null && $sameadr != "on") {
     $isValid = false;
-    echo "sameAddress";
+    echo "<p> WHY WOULD YOU EVEN DO THAT??? </p>";
 }
 
 if (!$isValid) {
-    echo "Information provided in the form is NOT Valid";
+    echo "<p> Information provided in the form is NOT Valid </p>";
 } else {
-    echo "Information provided in the form is Valid";
+    echo "<p> Information provided in the form is Valid </p>";
     //the information will be used for a transaction
 }
