@@ -5,7 +5,7 @@ window.onload = function() {
     initCheckoutButton();
 }
 
-//this sript will look through the contents of the order summary table and calculate the total amount and price
+//Will calculate and display the overall order price from the data that is in the order summary element
 function initOrderSummary() {
     let table = document.getElementById("productSummary");
     let rows = table.rows;
@@ -23,7 +23,8 @@ function initOrderSummary() {
     document.getElementById("totalSum").innerHTML = totalSum.toString();
 }
 
-//this script is responsible for the appearance of the collapsibles
+//this will cycle through the list of elements that have a class "collapsible" and add event listeners that
+//will handle clicks and make the according element appear/disappear
 function initCollapsibles() {
     let coll = document.getElementsByClassName("collapsible");
     for (let i = 0; i < coll.length; i++) {

@@ -1,11 +1,11 @@
 <?php
     //initialise session
     session_start();
-    require_once 'connect_db.php';
-
     if (!isset($_SESSION['cart'])) {
         $_SESSION['cart'] = array();
     }
+    //establish connection to the database
+    require_once 'connect_db.php';
 
     //handle add to cart request
     if (isset($_POST['addToCart'])) {
