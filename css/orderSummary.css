@@ -5,7 +5,7 @@
 }*/
 /*Style for the button that shows or hides divs*/
 .collapsible {
-    background-color: #777;
+    background-color: var(--cyan);
     color: white;
     cursor: pointer;
     padding: 18px;
@@ -17,7 +17,7 @@
 }
 /*style for button in ordsum div*/
 .inListButton {
-    background-color: #555;
+    background-color: var(--cyan);
     color: white;
     cursor: pointer;
     padding: 18px;
@@ -29,19 +29,16 @@
 }
 /*Style for the collapse button when it is clicked or activated*/
 .active, .collapsible:hover{
-    background-color: #555;
+    background-color: var(--cyan);
 }
-/*Style for the button in ordsum*/
-.inListButton:hover {
-    background-color: #777;
-}
+
 /*Style for the collapsible div*/
-.content {
+.content {  
     padding: 9px 18px;
     width: 100%;
     display: none;
     overflow: hidden;
-    background-color: #f1f1f1;
+    background-color: var(--light-grey);
 }
 /*Style for the table in ordsum*/
 .content table {

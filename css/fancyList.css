@@ -3,10 +3,15 @@
     flex-wrap:wrap;
     justify-content: space-evenly;
     align-items: baseline;
-    background-color: #f1f1f1;
+    background-color: var(--light-grey);
 }
 
 .fancyCard {
+    display: grid;
+    grid-template-areas: 
+    "left mid right"
+    "left mid-bot right-bot";
+    grid-template-columns: auto;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
     width: 100%;
     margin: 20px auto;
@@ -16,7 +21,7 @@
 }
 
 .fancyCard img {
-    float: left;
+    grid-area: left;
 }
 
 .fancyCard .price {
@@ -25,10 +30,13 @@
 }
 
 .fancyCard button {
+    grid-area: right;
     border: none;
     padding: 12px;
+    margin: 5px;
     color: white;
-    background-color: #000;
+    background-color: var(--deep-pink);
+    border-radius: 5px;
     text-align: center;
     cursor: pointer;
     font-size: 18px;
@@ -37,9 +45,16 @@
     white-space: nowrap;
 }
 
+.fancyCard h1 {
+    grid-area: mid;
+}
+
+.fancyCard p{
+    grid-area: mid-bot;
+}
+
 .fancyCard h1:hover {
     cursor: pointer;
-    background-color: #555555;
 }
 
 .submitButton {
@@ -47,7 +62,8 @@
     outline: 0;
     padding: 12px;
     color: white;
-    background-color: #000;
+    background-color: var(--cyan);
+    border-radius: 5px;
     text-align: center;
     cursor: pointer;
     font-size: 18px;

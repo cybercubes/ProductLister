@@ -3,7 +3,7 @@
     flex-wrap:wrap;
     justify-content: space-evenly;
     align-items: baseline;
-    background-color: #f1f1f1;
+    background-color: var(--light-grey);
 }
 
 .card {
@@ -14,6 +14,7 @@
     padding-top: 20px;
     text-align: center;
     font-family: arial;
+    border-radius: 5px;
 }
 
 .card:hover {
@@ -31,21 +32,23 @@
     outline: 0;
     padding: 12px;
     color: white;
-    background-color: #000;
+    background-color:var(--deep-pink);
     text-align: center;
     cursor: pointer;
-    width: 100%;
+    width: 90%;
     font-size: 18px;
+    border-radius: 5px;
 }
 /*style for the desription of the card, ensures that the cards stay the same width*/
-.card p:not(.price) {
+.card p:not(.price) , .card button{
     width: 300px;
     height: 40px;
     overflow: hidden;
 }
 
-.card p:not(.price):hover {
+.card p:not(.price):hover{
     overflow: visible;
     background-color: #cccccc;
     height: 100%;
 }
+

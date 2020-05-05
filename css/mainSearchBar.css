@@ -7,6 +7,7 @@
     font-size: 17px;
     border: none;
     width: 78%;
+    border-radius: 5px;
 }
 /*search button style*/
 .listHeading button {
@@ -19,11 +20,9 @@
     border: none;
     cursor: pointer;
     width: 18%;
+    border-radius: 5px;
 }
-/* Change the color of the search button on hover */
-listHeading button:hover {
-    background: #ccc;
-}
+
 
 @media screen and (max-width: 900px) {
     .listHeading input[type=text] {
