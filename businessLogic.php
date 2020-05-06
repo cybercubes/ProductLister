@@ -3,9 +3,6 @@
 if (isset($_GET['Page'])) {
     $currPage = $_GET['Page'];
     switch ($currPage) {
-        case "Home":
-            include 'modules/mainDisplay.php';
-            break;
         case "Browse":
             include 'modules/browse.php';
             break;

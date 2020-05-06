@@ -1,22 +1,3 @@
-<?php
-    if (isset($_GET['ProductName'])) {
-        $currentProduct = $_GET['ProductName'];
-    }
-
-    //check if the current product is in the cart
-    $inCart = false;
-    foreach( $_SESSION['cart'] as $item) {
-        if ($item['name'] == $currentProduct) {
-            $inCart = true;
-            break;
-        }
-    }
-
-
-    $productResult = mysqli_query($link, "SELECT * FROM products WHERE products.name = '" . $currentProduct . "';");
-    $result = mysqli_fetch_assoc($productResult);
-?>
-
 <div class="productDescription">
     <img src="./img/default_product.png" alt="">
     <h2><?php echo $currentProduct; ?></h2>

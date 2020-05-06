@@ -7,40 +7,8 @@
     //establish connection to the database
     require_once 'connect_db.php';
 
-    //handle add to cart request
-    if (isset($_POST['addToCart'])) {
-        $cartItem = ["name" => $_POST['addToCart'], "price" => $_POST['price'], "quantity" => $_POST['quantity'], "description" => $_POST['description']];
-        $alreadyInCart = false;
-        foreach($_SESSION['cart'] as $item) {
-            if ($item['name'] == $_POST['addToCart']) {
-                $alreadyInCart = true;
-                break;
-            }
-        }
+    require_once 'handlers.php';
 
-        if (!$alreadyInCart) {
-            array_push($_SESSION['cart'], $cartItem);
-        }
-    }
-
-    //handle remove from cart request
-    if (isset($_POST['removeFromCart'])) {
-        for($i = 0; $i < sizeof($_SESSION['cart']) + 1; $i++){
-            if ($_SESSION['cart'][$i]['name'] == $_POST['removeFromCart']) {
-                unset($_SESSION['cart'][$i]);
-                break;
-            }
-        }
-    }
-    //handle edit quantity request in cart
-    if (isset($_POST['editQuantity'])) {
-        for($i = 0; $i < sizeof($_SESSION['cart']) + 1; $i++){
-            if ($_SESSION['cart'][$i]['name'] == $_POST['editQuantity']) {
-                $_SESSION['cart'][$i]['quantity'] = $_POST['quantity'];
-                break;
-            }
-        }
-    }
 ?>
 <!DOCTYPE html>
 <html lang="en">

@@ -1,15 +1,3 @@
-<?php
-    if (isset($_GET['search'])) {
-        $productName = $_GET['search'];
-    } else {
-        $productName = null;
-    }
-
-    $Searchquery = "SELECT * FROM products WHERE name LIKE '%" . $productName . "%';";
-    $listQuery = mysqli_query($link, $Searchquery);
-
-?>
-
 <div class="listHeading">
     <p><h2>Search results for: "<?php echo $productName;?>"</h2></p>
     <form action="?Page=Search" method="GET" class="search-container">

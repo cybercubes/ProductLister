@@ -2,8 +2,7 @@
     <?php
         $listResult = mysqli_query($link, "SELECT * FROM products");
         while ($row = mysqli_fetch_assoc($listResult)):
-            //check if the product is in the car
-
+            //check if the product is in the cart
             $inCart = false;
             foreach( $_SESSION['cart'] as $item) {
                 if ($item['name'] == $row['name']) {
@@ -11,7 +10,6 @@
                     break;
                 }
             }
-
     ?>
         <div class="card">
             <div onclick="window.location.href = '?Page=Product&ProductName=<?php echo $row['name']; ?>';">
@@ -31,6 +29,7 @@
                 <?php else: ?>
                     <p><button type="submit" name="addToCart" value="<?php echo $row['name']; ?>">Add to cart</button></p>
                 <?php endif;?>
+
             </form>
         </div>
     <?php endwhile; ?>
